@@ -14,6 +14,8 @@
 		4A044CA823D33E7000E8B24D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A044CA723D33E7000E8B24D /* Assets.xcassets */; };
 		4A044CAB23D33E7000E8B24D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A044CAA23D33E7000E8B24D /* Preview Assets.xcassets */; };
 		4A044CAE23D33E7000E8B24D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A044CAC23D33E7000E8B24D /* LaunchScreen.storyboard */; };
+		4A044CB623D36C9700E8B24D /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A044CB523D36C9700E8B24D /* Components.swift */; };
+		4A044CB823D376F500E8B24D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A044CB723D376F500E8B24D /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		4A044CAA23D33E7000E8B24D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A044CAD23D33E7000E8B24D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A044CAF23D33E7000E8B24D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A044CB523D36C9700E8B24D /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		4A044CB723D376F500E8B24D /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				4A044C9E23D33E6E00E8B24D /* AppDelegate.swift */,
 				4A044CA023D33E6E00E8B24D /* SceneDelegate.swift */,
 				4A044CA523D33E6E00E8B24D /* ContentView.swift */,
+				4A044CB723D376F500E8B24D /* Buttons.swift */,
+				4A044CB523D36C9700E8B24D /* Components.swift */,
 				4A044CA723D33E7000E8B24D /* Assets.xcassets */,
 				4A044CAC23D33E7000E8B24D /* LaunchScreen.storyboard */,
 				4A044CAF23D33E7000E8B24D /* Info.plist */,
@@ -151,6 +157,8 @@
 			files = (
 				4A044CA423D33E6E00E8B24D /* Movie_Tracker.xcdatamodeld in Sources */,
 				4A044C9F23D33E6E00E8B24D /* AppDelegate.swift in Sources */,
+				4A044CB623D36C9700E8B24D /* Components.swift in Sources */,
+				4A044CB823D376F500E8B24D /* Buttons.swift in Sources */,
 				4A044CA623D33E6E00E8B24D /* ContentView.swift in Sources */,
 				4A044CA123D33E6E00E8B24D /* SceneDelegate.swift in Sources */,
 			);
