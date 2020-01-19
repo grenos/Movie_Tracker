@@ -21,8 +21,8 @@ struct MovieDetail: View {
   //  use the name of the object to read values from state (movie.titleMovie)
   //  use the "private" flag before declaring the var to make this state available only in this View
   
-  
   @State var movie: MovieModel
+  @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
     List {
@@ -60,7 +60,10 @@ struct MovieDetail: View {
       }
       
       Section {
-        Button(action: {}){
+        Button(action: {
+          // dismish current View (like react navigation goBack)
+          self.presentationMode.wrappedValue.dismiss()
+        }){
           HStack {
             Spacer()
             Text("Save")

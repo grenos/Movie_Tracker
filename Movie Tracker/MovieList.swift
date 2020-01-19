@@ -15,12 +15,22 @@ struct MovieList: View {
     MovieModel(),
     MovieModel()
   ]
-    
+  
   var body: some View {
     // anytime you're listing an array, this array needs to be indentifiable
     // like react is using keys for the items in a flatlist
-    List(movies){ movie in
-      Text(movie.titleMovie)
+    NavigationView{
+      List(movies){ currentMovie in
+        NavigationLink(destination: MovieDetail(movie: currentMovie)){
+          Text(currentMovie.titleMovie)
+        }
+      }
+      .navigationBarTitle("Movies")
+      .navigationBarItems(trailing:
+        NavigationLink(destination: MovieDetail(movie: MovieModel())){
+          Image(systemName: "plus")
+        }
+      )
     }
   }
 }
