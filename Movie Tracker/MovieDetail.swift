@@ -22,6 +22,15 @@ struct MovieDetail: View {
   //  use the "private" flag before declaring the var to make this state available only in this View
   
   @State var movie: MovieModel
+  //  We instruct SwiftUI to observe the MovieStorage class for changes
+  //  We use the @ObservedObject here and  --NOT-- the @ObservableObject
+  //  We can copy paste this to any other component if we want to share it with that component
+//  @ObservedObject var movieStorage : MovieStorage
+  
+//  make SwiftUi know that we want to observe the EnvironmentObject
+  @EnvironmentObject var movieStorage : MovieStorage
+  let newMovie : Bool
+  
   @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
@@ -61,8 +70,21 @@ struct MovieDetail: View {
       
       Section {
         Button(action: {
+          if self.newMovie {
+            self.movieStorage.movies.append(self.movie)
+          } else {
+            // here goes the array of added movies
+            for i in 0..<self.movieStorage.movies.count {
+              // we search through it to find the one we clikced
+              if self.movieStorage.movies[i].id == self.movie.id {
+                // and we update the info
+                self.movieStorage.movies[i] = self.movie
+              }
+            }
+          }
           // dismish current View (like react navigation goBack)
           self.presentationMode.wrappedValue.dismiss()
+          
         }){
           HStack {
             Spacer()
@@ -82,7 +104,7 @@ struct MovieDetail: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    MovieDetail(movie: MovieModel())
+    MovieDetail(movie: MovieModel(), newMovie: true)
   }
 }
 
